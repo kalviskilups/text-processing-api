@@ -1,0 +1,11 @@
+{
+    "prompts": {
+        "summarize": "Provide a concise summary of the following text. Focus strictly on the main ideas, using no more than 3-4 sentences. Omit any extraneous commentary.",
+        "tag": "Extract ONLY the top 3-5 most important keywords from the text. Return the tags in the format: [keyword1], [keyword2], [keyword3], ...",
+        "sentiment": "Analyze the sentiment of the text and return ONLY the overall sentiment as one word: Positive, Negative, or Neutral.",
+        "complexity": "Assess the reading complexity of the text. Provide the Flesch-Kincaid Grade Level and a one-sentence explanation of the reading difficulty."
+    },
+    "example_text": {
+        "content": "Renewable energy sources such as solar, wind, and hydropower have gained significant attention in recent years as sustainable alternatives to fossil fuels. These energy sources are environmentally friendly and help reduce greenhouse gas emissions, contributing to the fight against climate change. However, challenges such as high initial costs and reliance on weather conditions remain obstacles to widespread adoption. Governments and organizations worldwide are increasingly investing in research and infrastructure to overcome these barriers and promote the transition to cleaner energy solutions."
+    }
+}
