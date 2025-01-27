@@ -1,10 +1,6 @@
 import json
 from flask import Flask, request, jsonify
-from dotenv import load_dotenv
 from utils import read_uploaded_file, process_text_with_llm
-
-# Load environment variables
-load_dotenv()
 
 # Load task prompts from config.json
 with open("config.json", "r") as config_file:
@@ -34,7 +30,9 @@ def process_request():
 
         if "text" in request.form:
             text = request.form["text"]
-            result = process_text_with_llm(text=text, task_type=task_type, task_prompts=config)
+            result = process_text_with_llm(
+                text=text, task_type=task_type, task_prompts=config
+            )
             return jsonify({"status": "success", "task": task_type, "result": result})
 
         if "file" in request.files:
@@ -44,7 +42,9 @@ def process_request():
                 return jsonify({"error": "No selected file"}), 400
 
             text = read_uploaded_file(file)
-            result = process_text_with_llm(text=text, task_type=task_type, task_prompts=config)
+            result = process_text_with_llm(
+                text=text, task_type=task_type, task_prompts=config
+            )
 
             return jsonify(
                 {

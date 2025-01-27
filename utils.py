@@ -3,6 +3,9 @@ import json
 import pandas as pd
 from io import BufferedReader
 from openai import AzureOpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Configure Azure OpenAI Client
 client = AzureOpenAI(

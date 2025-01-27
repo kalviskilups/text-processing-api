@@ -81,7 +81,7 @@ if __name__ == "__main__":
     print("Health Check:")
     print(health_check())
 
-    ## Multiple task type examples
+    # Multiple task type examples
 
     # Summarization
     print("\nSummarization:")
